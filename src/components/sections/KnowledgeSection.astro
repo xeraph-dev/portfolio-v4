@@ -1,0 +1,31 @@
+---
+import { t } from "i18next";
+import Card from "../Card.astro";
+import data from "data.json";
+import Icon from "../Icon.astro";
+---
+
+<section class="py-20 container p-2 flex flex-col gap-8">
+  <h2 class="text-2xl pl-6 font-amita">{t("knowledge")}</h2>
+  <ul
+    class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+  >
+    {
+      Object.entries(data.knowledge).map(([key, skills]) => (
+        <li>
+          <Card>
+            <h3 class="text-xl p-1">{t(key)}</h3>
+            <ul class="grid grid-cols-3 gap-3">
+              {skills.map((skill) => (
+                <li class="flex flex-col gap-1 items-center text-sm font-light">
+                  <Icon size="large" icon={skill as any} />
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </Card>
+        </li>
+      ))
+    }
+  </ul>
+</section>

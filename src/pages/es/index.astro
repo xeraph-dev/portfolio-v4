@@ -1,0 +1,17 @@
+---
+import { changeLanguage } from "i18next";
+import AboutMeSection from "../../components/sections/AboutMeSection.astro";
+import KnowledgeSection from "../../components/sections/KnowledgeSection.astro";
+import ProjectsSection from "../../components/sections/ProjectsSection.astro";
+import WorkExperienceSection from "../../components/sections/WorkExperienceSection.astro";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage("es");
+---
+
+<Layout>
+  <AboutMeSection />
+  <WorkExperienceSection />
+  <KnowledgeSection />
+  <ProjectsSection />
+</Layout>

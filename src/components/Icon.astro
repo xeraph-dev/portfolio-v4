@@ -1,0 +1,24 @@
+---
+import { icons } from "../../data.json";
+import Tooltip from "./Tooltip.astro";
+
+interface Props {
+  size?: "small" | "normal" | "large";
+  icon: keyof typeof icons;
+  withTooltip?: boolean;
+}
+
+const { size = "normal", icon, withTooltip = false } = Astro.props as Props;
+
+const width = size === "small" ? "16" : size === "large" ? "32" : "24";
+---
+
+{
+  withTooltip ? (
+    <Tooltip title={icon} placement="top">
+      <iconify-icon icon={icons[icon]} width={width} height={width} />
+    </Tooltip>
+  ) : (
+    <iconify-icon icon={icons[icon]} width={width} height={width} />
+  )
+}

@@ -1,0 +1,393 @@
+{
+  "$schema": "./data.schema.json",
+  "site": "https://xeraph.dev",
+  "version": 4,
+  "projectRepository": "https://github.com/adrianrl99/portfolio-v4",
+  "social": {
+    "GitHub": "https://github.com/adrianrl99",
+    "Telegram": "https://t.me/fourblues",
+    "Linkedin": "https://www.linkedin.com/in/adrian-lópez/",
+    "Twitter": "https://twitter.com/Adrianrlc"
+  },
+  "utilLinks": {
+    "dotfiles": "https://github.com/adrianrl99/dotfiles"
+  },
+  "knowledge": {
+    "languages": ["Html5", "Css3", "JavaScript", "TypeScript", "Swift", "Rust"],
+    "css_utilities": [
+      "Sass",
+      "Styled Components",
+      "Bootstrap",
+      "TailwindCSS",
+      "PostCSS"
+    ],
+    "front-end": [
+      "React.js",
+      "Next.js",
+      "Vue.js",
+      "Nuxt.js",
+      "Astro",
+      "SwiftUI"
+    ],
+    "back-end": ["Node.js", "Express.js", "Next.js", "Nuxt.js"],
+    "ui_framework": [
+      "Material UI",
+      "Chakra UI",
+      "Vuetify",
+      "Ant Design",
+      "Mantine"
+    ],
+    "state_management": ["Context API", "Redux.js", "Recoil.js"],
+    "desploy": ["Vercel"],
+    "version_control": ["Git", "GitHub", "GitLab"],
+    "linux": ["Bash", "Docker", "Linux", "Ubuntu", "ArchLinux"]
+  },
+  "projects": [
+    {
+      "title": "Portfolio v4",
+      "description": "Version 4 of my portfolio (this)",
+      "repo": "portfolio-v4",
+      "web": "https://v4.xeraph.dev",
+      "skills": [
+        "Html5",
+        "Css3",
+        "PostCSS",
+        "JavaScript",
+        "TypeScript",
+        "Astro",
+        "TailwindCSS",
+        "Iconify",
+        "MDX",
+        "Vercel"
+      ]
+    },
+    {
+      "title": "Sudoku",
+      "repo": "sudoku",
+      "description": "A simple sudoku desktop app",
+      "skills": [
+        "Html5",
+        "Css3",
+        "PostCSS",
+        "JavaScript",
+        "TypeScript",
+        "Svelte",
+        "Tauri"
+      ]
+    },
+    {
+      "title": "Channel watcher bot",
+      "repo": "channels-watcher-bot",
+      "description": "Telegram bot to watch groups and channels and notify you when it matches a configured filter",
+      "skills": ["Python", "Docker", "Prisma"]
+    },
+    {
+      "title": "Blog markup example",
+      "repo": "blog-markup-example",
+      "web": "https://blog-markup-example.xeraph.dev",
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "Swiper.js",
+        "Iconify",
+        "Alpine.js",
+        "Vercel"
+      ]
+    },
+    {
+      "title": "Portfolio v3",
+      "repo": "portfolio-v3",
+      "web": "https://v3.xeraph.dev",
+      "description": "Version 3 of my portfolio",
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "TypeScript",
+        "Astro",
+        "TailwindCSS",
+        "Vercel"
+      ]
+    },
+    {
+      "title": "Challenge Search flights",
+      "repo": "challenge-search-flights",
+      "web": "https://challenge-search-flights.xeraph.dev/",
+      "skills": ["Html5", "Css3", "Sass", "JavaScript", "TypeScript", "Vercel"]
+    },
+    {
+      "title": "Challenge Chart",
+      "repo": "challenge-chart",
+      "web": "https://challenge-chart.xeraph.dev/",
+      "skills": ["Html5", "Css3", "Sass", "JavaScript", "TypeScript", "Vercel"]
+    },
+    {
+      "title": "VM Translator",
+      "description": "A VM Translator for Hack VM",
+      "repo": "vm-translator",
+      "skills": ["Haskell"]
+    },
+    {
+      "title": "Hack Assembler",
+      "description": "An Assembler for Hack Assembly",
+      "repo": "hack-assembler",
+      "skills": ["Haskell"]
+    },
+    {
+      "title": "Space Invaders",
+      "description": "Simple Space Invaders game written in Racket",
+      "repo": "space-invaders.rkt",
+      "skills": ["Racket"]
+    },
+    {
+      "title": "Portfolio v2",
+      "description": "Version 2 of my portfolio",
+      "repo": "portfolio",
+      "web": "https://v2.xeraph.dev/",
+      "skills": ["Html5", "Css3", "PostCSS", "React.js", "Vercel"]
+    },
+    {
+      "title": "Challenge accordion",
+      "repo": "challenge-accordion",
+      "web": "https://accordion-challenge.xeraph.dev",
+      "skills": [
+        "Html5",
+        "Css3",
+        "PostCSS",
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Vercel"
+      ]
+    },
+    {
+      "title": "Challenge vacations api",
+      "repo": "challenge-vacations-api",
+      "skills": ["JavaScript", "TypeScript", "Node.js", "Express.js"]
+    },
+    {
+      "title": "Full-stack interview",
+      "repo": "full-stack-interview",
+      "skills": ["Html5", "Css3", "JavaScript", "TypeScript", "React.js"]
+    },
+    {
+      "title": "Dual repo",
+      "description": "An utility to update a repo from another repo",
+      "repo": "dual_repo",
+      "skills": ["JavaScript", "Node.js"]
+    },
+    {
+      "title": "Auth with tweetnacl",
+      "description": "Simple auth example with tweetnacl",
+      "repo": "auth-with-tweetnacl",
+      "skills": ["Html5", "JavaScript", "Node.js"]
+    },
+    {
+      "title": "Client CRUD Challeng",
+      "description": "Client of a CRUD application challenge",
+      "repo": "challenge-crud-students-admin",
+      "skills": [
+        "Html5",
+        "Css3",
+        "PostCSS",
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Material UI"
+      ]
+    },
+    {
+      "title": "Server CRUD Challenge",
+      "description": "Server of a CRUD application challenge",
+      "repo": "challenge-crud-students-server",
+      "skills": ["JavaScript", "TypeScript", "Node.js", "Express.js", "MongoDB"]
+    },
+    {
+      "title": "Slidercards",
+      "description": "Slidecards challenge",
+      "repo": "slidercards",
+      "web": "https://slidercards.xeraph.dev",
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Styled Components",
+        "Vercel"
+      ]
+    },
+    {
+      "title": "BettyCook",
+      "description": "A recipe book",
+      "repo": "bettycook",
+      "skills": ["Dart", "Flutter"]
+    },
+    {
+      "title": "Portfolio v1",
+      "repo": "porfolio",
+      "web": "https://v1.xeraph.dev",
+      "description": "My first portfolio",
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Material UI",
+        "Framer",
+        "Vercel"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "company": "Divertimento",
+      "start": "2022-11",
+      "web": "https://github.com/divertimento",
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Material UI",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "company": "Freelance",
+      "start": "2022-9",
+      "end": "2022-11",
+      "skills": ["Html5", "Css3", "JavaScript", "React.js", "Ant Design", "Sap"]
+    },
+    {
+      "company": "Divertimento",
+      "start": "2022-3",
+      "end": "2022-8",
+      "web": "https://github.com/divertimento",
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Vue.js",
+        "Chakra UI",
+        "Node.js",
+        "Express.js",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "company": "IJP Software",
+      "start": "2021-7",
+      "end": "2022-7",
+      "web": "https://github.com/divertimento",
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Vue.js",
+        "Material UI",
+        "Chakra UI",
+        "Sass",
+        "Redux.js",
+        "Node.js",
+        "Express.js",
+        "Git",
+        "GitHub",
+        "Bash",
+        "Docker"
+      ]
+    },
+    {
+      "company": "Xetid",
+      "start": "2019-10",
+      "end": "2021-8",
+      "web": "https://www.xetid.cu/",
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "JQuery",
+        "php",
+        "Drupal",
+        "PostgreSQL",
+        "Debian",
+        "Linux"
+      ]
+    }
+  ],
+  "icons": {
+    "Html5": "vscode-icons:file-type-html",
+    "Css3": "vscode-icons:file-type-css",
+    "JavaScript": "vscode-icons:file-type-js-official",
+    "TypeScript": "vscode-icons:file-type-typescript-official",
+    "Rust": "vscode-icons:file-type-rust",
+    "php": "logos:php",
+    "Bash": "logos:bash-icon",
+    "Dart": "logos:dart",
+    "Racket": "vscode-icons:file-type-racket",
+    "Haskell": "logos:haskell-icon",
+    "Python": "logos:python",
+    "Swift": "vscode-icons:file-type-swift",
+    "MDX": "vscode-icons:file-type-mdx",
+    "Sass": "logos:sass",
+    "Styled Components": "vscode-icons:file-type-styled",
+    "PostCSS": "vscode-icons:file-type-postcss",
+    "Bootstrap": "logos:bootstrap",
+    "TailwindCSS": "logos:tailwindcss-icon",
+    "SwiftUI": "vscode-icons:file-type-swift",
+    "Flutter": "logos:flutter",
+    "Tauri": "logos:tauri",
+    "JQuery": "simple-icons:jquery",
+    "React.js": "logos:react",
+    "Vue.js": "logos:vue",
+    "Svelte": "logos:svelte-icon",
+    "Alpine.js": "logos:alpinejs-icon",
+    "Material UI": "logos:material-ui",
+    "Chakra UI": "simple-icons:chakraui",
+    "Ant Design": "logos:ant-design",
+    "Mantine": "logos:mantine-icon",
+    "Vuetify": "logos:vuetifyjs",
+    "Framer": "simple-icons:framer",
+    "Swiper.js": "simple-icons:swiper",
+    "Iconify": "simple-icons:iconify",
+    "Context API": "logos:react",
+    "Redux.js": "logos:redux",
+    "Recoil.js": "logos:recoil-icon",
+    "Node.js": "logos:nodejs-icon",
+    "Express.js": "simple-icons:express",
+    "Astro": "vscode-icons:file-type-astro",
+    "Next.js": "vscode-icons:file-type-next",
+    "Nuxt.js": "logos:nuxt-icon",
+    "Prisma": "simple-icons:prisma",
+    "Drupal": "logos:drupal-icon",
+    "PostgreSQL": "logos:postgresql",
+    "MongoDB": "vscode-icons:file-type-mongo",
+    "Docker": "logos:docker-icon",
+    "Linux": "logos:linux-tux",
+    "Debian": "logos:debian",
+    "ArchLinux": "logos:archlinux",
+    "Ubuntu": "logos:ubuntu",
+    "Vercel": "simple-icons:vercel",
+    "Git": "logos:git-icon",
+    "GitHub": "simple-icons:github",
+    "GitLab": "logos:gitlab",
+    "Sap": "simple-icons:sap",
+    "Telegram": "logos:telegram",
+    "Linkedin": "logos:linkedin-icon",
+    "Twitter": "logos:twitter",
+    "Link": "mdi:link"
+  }
+}

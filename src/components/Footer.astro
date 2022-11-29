@@ -1,0 +1,64 @@
+---
+import { t } from "i18next";
+
+import data from "data.json";
+import Icon from "./Icon.astro";
+---
+
+<footer class="container flex flex-col gap-1 p-2">
+  <div>
+    <ul
+      class="flex items-center flex-wrap divide-gray-400 divide-x divide-dotted"
+    >
+      {
+        Object.entries(data.utilLinks).map(([key, value]) => (
+          <li>
+            <a href={value} class="px-2 text-amber-700">
+              {t(key)}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div
+    class="flex items-center justify-between w-full px-4 py-2 rounded-md shadow-lg bg-slate-800 bg-opacity-60"
+  >
+    <ul class="flex gap-3">
+      {
+        Object.entries(data.social).map(([key, value]) => (
+          <li class="flex items-center justify-center">
+            <a href={value} target="_blank">
+              <Icon icon={key as any} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="flex gap-2 italic">
+      <span class="text-slate-400 max-sm:hidden">{t("versions")}:</span>
+      <ul class="flex gap-2">
+        {
+          Array(data.version - 1)
+            .fill(0)
+            .map((_, i) => {
+              const version = i + 1;
+              const href = new URL(data.site);
+              href.host = `v${version}.${href.host}`;
+              return (
+                <li>
+                  <a
+                    class="text-amber-700"
+                    href={href.toString()}
+                    target="_blank"
+                  >
+                    v{version}
+                  </a>
+                </li>
+              );
+            })
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

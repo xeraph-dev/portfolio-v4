@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "properties": {
+    "site": {
+      "type": "string",
+      "description": "Site url"
+    },
+    "version": {
+      "type": "number",
+      "description": "The project version number"
+    },
+    "projectRepository": {
+      "type": "string",
+      "description": "Project repository link"
+    },
+    "social": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "utilLinks": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "knowledge": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "repo": {
+            "type": "string"
+          },
+          "web": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "works": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string"
+          },
+          "end": {
+            "type": "string"
+          },
+          "web": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "icons": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

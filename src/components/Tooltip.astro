@@ -1,0 +1,70 @@
+---
+import type { Placement } from "@popperjs/core";
+
+interface Props {
+  placement?: Placement;
+  title: string;
+}
+
+const { placement = "right", title } = Astro.props as Props;
+---
+
+<x-tooltip data-popper-placement={placement}>
+  <span aria-describedby="tooltip">
+    <slot />
+  </span>
+  <div
+    id="popper"
+    role="tooltip"
+    class="bg-slate-800 shadow-lg p-1 text-xs font-amita rounded-md text-light hidden data-[show]:block"
+  >
+    {title}
+  </div>
+</x-tooltip>
+
+<script>
+  import { createPopper, Placement } from "@popperjs/core";
+
+  customElements.define(
+    "x-tooltip",
+    class extends HTMLElement {
+      constructor() {
+        super();
+
+        const base = this.querySelector("[aria-describedby=tooltip]");
+        const tooltip = this.querySelector("[role=tooltip]") as HTMLElement;
+        const placement = this.getAttribute("data-popper-placement");
+        if (base && tooltip) {
+          const popper = createPopper(base, tooltip, {
+            placement: placement as Placement | undefined,
+            modifiers: [
+              {
+                name: "offset",
+                options: {
+                  offset: [0, 8],
+                },
+              },
+            ],
+          });
+
+          function show() {
+            tooltip.setAttribute("data-show", "");
+            popper.update();
+          }
+
+          function hide() {
+            tooltip.removeAttribute("data-show");
+          }
+
+          ["mouseenter", "focus"].forEach((event) => {
+            base.addEventListener(event, show);
+          });
+
+          ["mouseleave", "blur"].forEach((event) => {
+            base.addEventListener(event, hide);
+          });
+        }
+      }
+    }
+  );
+</script>

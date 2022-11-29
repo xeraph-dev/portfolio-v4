@@ -1,0 +1,51 @@
+---
+import { t } from "i18next";
+import Card from "../Card.astro";
+import data from "data.json";
+import Icon from "../Icon.astro";
+---
+
+<section class="py-20 container p-2 flex flex-col gap-8">
+  <h2 class="text-2xl pl-6 font-amita">{t("projects")}</h2>
+  <ul
+    class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+  >
+    {
+      data.projects.map(({ title, web, repo, skills, description }) => (
+        <li>
+          <Card className="flex gap-3 p-3">
+            <header class="flex gap-6 items-start justify-between">
+              <h4 class="text-lg">{title}</h4>
+              <div class="flex gap-3">
+                {web && (
+                  <a href={web} target="_blank">
+                    <Icon icon="Link" />
+                  </a>
+                )}
+                {repo && (
+                  <a
+                    href={`https://github.com/adrianrl99/${repo}`}
+                    target="_blank"
+                  >
+                    <Icon icon="GitHub" />
+                  </a>
+                )}
+              </div>
+            </header>
+            <p class="text-sm">{description}</p>
+            <div class="grow" />
+            <footer>
+              <ul class="flex gap-2 flex-wrap">
+                {(skills as any[]).map((skill) => (
+                  <li class="flex items-center justify-center">
+                    <Icon withTooltip icon={skill} size="small" />
+                  </li>
+                ))}
+              </ul>
+            </footer>
+          </Card>
+        </li>
+      ))
+    }
+  </ul>
+</section>

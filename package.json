@@ -1,0 +1,36 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "gen:locales": "astro-i18next generate",
+    "deploy": "vercel deploy"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^0.12.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^2.1.3",
+    "@fontsource/amita": "^4.5.10",
+    "@types/luxon": "^3.1.0",
+    "astro": "^1.6.11",
+    "astro-compress": "^1.1.11",
+    "astro-i18next": "^1.0.0-beta.13",
+    "astro-robots-txt": "^0.3.10",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4",
+    "vercel": "^28.5.6"
+  },
+  "dependencies": {
+    "@fontsource/nunito": "^4.5.11",
+    "@popperjs/core": "^2.11.6",
+    "iconify-icon": "^1.0.1",
+    "luxon": "^3.1.0"
+  }
+}

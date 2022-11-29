@@ -1,0 +1,12 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("es");
+---
+
+<Layout title="Blog">
+  <div class="grow flex justify-center items-center">
+    <h1 class="font-amita text-2xl">{t("thinkingAboutWrite")}</h1>
+  </div>
+</Layout>

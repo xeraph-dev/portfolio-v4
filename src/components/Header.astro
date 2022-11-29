@@ -1,0 +1,37 @@
+---
+import { localizePath } from "astro-i18next";
+import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
+import Navbar from "./Navbar.astro";
+import NavLink from "./NavLink.astro";
+import data from "data.json";
+import Tooltip from "./Tooltip.astro";
+import Icon from "./Icon.astro";
+---
+
+<Navbar>
+  <div class="flex gap-3 items-center">
+    <a href={localizePath("/")} class="font-amita font-bold text-cyan-600">
+      Xeraph
+    </a>
+    <ul class="gap-2 flex">
+      <li>
+        <NavLink href={localizePath("/blog")}>{t("blog")}</NavLink>
+      </li>
+    </ul>
+  </div>
+  <div class="flex gap-3 items-center">
+    <span
+      class="py-1 px-2 rounded-md hover:bg-slate-900 hover:shadow-sm transition"
+    >
+      <Tooltip title={t("change_language")} placement="bottom">
+        <LanguageSelector showFlag class="outline-none bg-transparent" />
+      </Tooltip>
+    </span>
+    <Tooltip title={t("go_to_repository")} placement="bottom">
+      <a href={data.projectRepository} target="_blank" class="flex">
+        <Icon icon="GitHub" />
+      </a>
+    </Tooltip>
+  </div>
+</Navbar>

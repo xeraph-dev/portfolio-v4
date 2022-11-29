@@ -1,0 +1,76 @@
+---
+import { DateTime } from "luxon";
+import { t } from "i18next";
+import Card from "../Card.astro";
+import data from "data.json";
+import Icon from "../Icon.astro";
+---
+
+<section class="py-20 container p-2 flex flex-col gap-8">
+  <h2 class="text-2xl pl-6 font-amita">{t("work_experience")}</h2>
+  <ul class="grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      data.works.map(({ company, web, start, end = new Date(), skills }) => {
+        const startDate = new Date(start);
+        const endDate = new Date(end);
+
+        const interval = DateTime.fromJSDate(startDate).until(
+          DateTime.fromJSDate(endDate)
+        );
+
+        const { months, years } = interval
+          .toDuration(["years", "months"])
+          .toObject();
+        const time = `${
+          years && years >= 1
+            ? `${Math.floor(years)} ${t("year", { count: years })}`
+            : ""
+        }${
+          years && years >= 1 && months && months >= 1 ? ` ${t("and")} ` : ""
+        }${
+          months && months >= 1
+            ? `${Math.ceil(months)} ${t("month", {
+                count: months,
+              })}`
+            : ""
+        }`;
+        return (
+          <li>
+            <Card className="flex gap-3 p-3">
+              <header class="flex gap-6 items-center justify-between">
+                <h4 class="text-lg">{company}</h4>
+                <div class="flex gap-3">
+                  {web && (
+                    <a href={web} target="_blank">
+                      <Icon icon="Link" />
+                    </a>
+                  )}
+                </div>
+              </header>
+              <span class="flex gap-2 text-sm">
+                {startDate.getFullYear() === endDate.getFullYear() ? (
+                  <span>{endDate.getFullYear()}</span>
+                ) : (
+                  <span>
+                    {startDate.getFullYear()} - {endDate.getFullYear()}
+                  </span>
+                )}
+                |<span>{time}</span>
+              </span>
+              <div class="grow" />
+              <footer>
+                <ul class="flex gap-2 flex-wrap">
+                  {(skills as any[]).map((skill) => (
+                    <li class="flex items-center justify-center">
+                      <Icon withTooltip size="small" icon={skill} />
+                    </li>
+                  ))}
+                </ul>
+              </footer>
+            </Card>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
