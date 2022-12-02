@@ -38,7 +38,7 @@
       "Mantine"
     ],
     "state_management": ["Context API", "Redux.js", "Recoil.js"],
-    "desploy": ["Vercel"],
+    "deploy": ["Vercel"],
     "version_control": ["Git", "GitHub", "GitLab"],
     "linux": ["Bash", "Docker", "Linux", "Ubuntu", "ArchLinux"]
   },
@@ -289,7 +289,7 @@
       "company": "IJP Software",
       "start": "2021-7",
       "end": "2022-7",
-      "web": "https://github.com/divertimento",
+      "web": "https://github.com/IJPSoftware",
       "skills": [
         "Html5",
         "Css3",
@@ -388,6 +388,8 @@
     "Telegram": "logos:telegram",
     "Linkedin": "logos:linkedin-icon",
     "Twitter": "logos:twitter",
-    "Link": "mdi:link"
+    "Link": "mdi:link",
+    "locale.en": "flag:gb-4x3",
+    "locale.es": "flag:es-4x3"
   }
 }
