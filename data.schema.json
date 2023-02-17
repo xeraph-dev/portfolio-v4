@@ -1,95 +1,99 @@
 {
-  "type": "object",
   "properties": {
-    "site": {
-      "type": "string",
-      "description": "Site url"
-    },
-    "version": {
-      "type": "number",
-      "description": "The project version number"
-    },
-    "projectRepository": {
-      "type": "string",
-      "description": "Project repository link"
-    },
-    "social": {
-      "type": "object",
-      "additionalProperties": { "type": "string" }
-    },
-    "utilLinks": {
-      "type": "object",
-      "additionalProperties": { "type": "string" }
+    "icons": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
     },
     "knowledge": {
-      "type": "object",
       "additionalProperties": {
-        "type": "array",
         "items": {
           "type": "string"
-        }
-      }
+        },
+        "type": "array"
+      },
+      "type": "object"
+    },
+    "projectRepository": {
+      "description": "Project repository link",
+      "type": "string"
     },
     "projects": {
-      "type": "array",
       "items": {
-        "type": "object",
         "properties": {
-          "title": {
+          "description": {
             "type": "string"
           },
           "repo": {
             "type": "string"
           },
-          "web": {
-            "type": "string"
-          },
           "skills": {
-            "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "type": "array"
           },
-          "description": {
+          "title": {
+            "type": "string"
+          },
+          "web": {
             "type": "string"
           }
-        }
-      }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "site": {
+      "description": "Site url",
+      "type": "string"
+    },
+    "social": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "utilLinks": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "version": {
+      "description": "The project version number",
+      "type": "number"
     },
     "works": {
-      "type": "array",
       "items": {
-        "type": "object",
         "properties": {
           "company": {
             "type": "string"
           },
-          "start": {
+          "description": {
             "type": "string"
           },
           "end": {
             "type": "string"
           },
-          "web": {
-            "type": "string"
-          },
           "skills": {
-            "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "type": "array"
           },
-          "description": {
+          "start": {
+            "type": "string"
+          },
+          "web": {
             "type": "string"
           }
-        }
-      }
-    },
-    "icons": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "string"
-      }
+        },
+        "type": "object"
+      },
+      "type": "array"
     }
-  }
+  },
+  "type": "object"
 }

@@ -1,19 +1,71 @@
 {
   "$schema": "./data.schema.json",
-  "site": "https://xeraph.dev",
-  "version": 4,
-  "projectRepository": "https://github.com/adrianrl99/portfolio-v4",
-  "social": {
-    "GitHub": "https://github.com/adrianrl99",
-    "Telegram": "https://t.me/fourblues",
-    "Linkedin": "https://www.linkedin.com/in/adrian-lópez/",
-    "Twitter": "https://twitter.com/Adrianrlc"
-  },
-  "utilLinks": {
-    "dotfiles": "https://github.com/adrianrl99/dotfiles"
+  "icons": {
+    "Alpine.js": "logos:alpinejs-icon",
+    "Ant Design": "logos:ant-design",
+    "ArchLinux": "logos:archlinux",
+    "Astro": "vscode-icons:file-type-astro",
+    "Bash": "logos:bash-icon",
+    "Bootstrap": "logos:bootstrap",
+    "Chakra UI": "simple-icons:chakraui",
+    "Context API": "logos:react",
+    "Css3": "vscode-icons:file-type-css",
+    "Dart": "logos:dart",
+    "Debian": "logos:debian",
+    "Docker": "logos:docker-icon",
+    "Drupal": "logos:drupal-icon",
+    "Express.js": "simple-icons:express",
+    "Flutter": "logos:flutter",
+    "Framer": "simple-icons:framer",
+    "Git": "logos:git-icon",
+    "GitHub": "simple-icons:github",
+    "GitLab": "logos:gitlab",
+    "Haskell": "logos:haskell-icon",
+    "Html5": "vscode-icons:file-type-html",
+    "Iconify": "simple-icons:iconify",
+    "JQuery": "simple-icons:jquery",
+    "JavaScript": "vscode-icons:file-type-js-official",
+    "Link": "mdi:link",
+    "Linkedin": "logos:linkedin-icon",
+    "Linux": "logos:linux-tux",
+    "MDX": "vscode-icons:file-type-mdx",
+    "Mantine": "logos:mantine-icon",
+    "Material UI": "logos:material-ui",
+    "MongoDB": "vscode-icons:file-type-mongo",
+    "Next.js": "vscode-icons:file-type-next",
+    "Node.js": "logos:nodejs-icon",
+    "Nuxt.js": "logos:nuxt-icon",
+    "PostCSS": "vscode-icons:file-type-postcss",
+    "PostgreSQL": "logos:postgresql",
+    "Prisma": "simple-icons:prisma",
+    "Python": "logos:python",
+    "Racket": "vscode-icons:file-type-racket",
+    "React.js": "logos:react",
+    "Recoil.js": "logos:recoil-icon",
+    "Redux.js": "logos:redux",
+    "Rust": "vscode-icons:file-type-rust",
+    "Sap": "simple-icons:sap",
+    "Sass": "logos:sass",
+    "Styled Components": "vscode-icons:file-type-styled",
+    "Svelte": "logos:svelte-icon",
+    "Swift": "vscode-icons:file-type-swift",
+    "SwiftUI": "vscode-icons:file-type-swift",
+    "Swiper.js": "simple-icons:swiper",
+    "TailwindCSS": "logos:tailwindcss-icon",
+    "Tauri": "logos:tauri",
+    "Telegram": "logos:telegram",
+    "Twitter": "logos:twitter",
+    "TypeScript": "vscode-icons:file-type-typescript-official",
+    "Ubuntu": "logos:ubuntu",
+    "Vercel": "simple-icons:vercel",
+    "Vue.js": "logos:vue",
+    "Vuetify": "logos:vuetifyjs",
+    "locale.en": "flag:gb-4x3",
+    "locale.es": "flag:es-4x3",
+    "php": "logos:php"
   },
   "knowledge": {
-    "languages": ["Html5", "Css3", "JavaScript", "TypeScript", "Swift", "Rust"],
+    "back-end": ["Node.js", "Express.js", "Next.js", "Nuxt.js"],
     "css_utilities": [
       "Sass",
       "Styled Components",
@@ -21,6 +73,7 @@
       "TailwindCSS",
       "PostCSS"
     ],
+    "deploy": ["Vercel"],
     "front-end": [
       "React.js",
       "Next.js",
@@ -29,7 +82,9 @@
       "Astro",
       "SwiftUI"
     ],
-    "back-end": ["Node.js", "Express.js", "Next.js", "Nuxt.js"],
+    "languages": ["Html5", "Css3", "JavaScript", "TypeScript", "Swift", "Rust"],
+    "linux": ["Bash", "Docker", "Linux", "Ubuntu", "ArchLinux"],
+    "state_management": ["Context API", "Redux.js", "Recoil.js"],
     "ui_framework": [
       "Material UI",
       "Chakra UI",
@@ -37,17 +92,13 @@
       "Ant Design",
       "Mantine"
     ],
-    "state_management": ["Context API", "Redux.js", "Recoil.js"],
-    "deploy": ["Vercel"],
-    "version_control": ["Git", "GitHub", "GitLab"],
-    "linux": ["Bash", "Docker", "Linux", "Ubuntu", "ArchLinux"]
+    "version_control": ["Git", "GitHub", "GitLab"]
   },
+  "projectRepository": "https://github.com/adrianrl99/portfolio-v4",
   "projects": [
     {
-      "title": "Portfolio v4",
       "description": "Version 4 of my portfolio (this)",
       "repo": "portfolio-v4",
-      "web": "https://v4.xeraph.dev",
       "skills": [
         "Html5",
         "Css3",
@@ -59,12 +110,13 @@
         "Iconify",
         "MDX",
         "Vercel"
-      ]
+      ],
+      "title": "Portfolio v4",
+      "web": "https://v4.xeraph.dev"
     },
     {
-      "title": "Sudoku",
-      "repo": "sudoku",
       "description": "A simple sudoku desktop app",
+      "repo": "sudoku",
       "skills": [
         "Html5",
         "Css3",
@@ -73,18 +125,17 @@
         "TypeScript",
         "Svelte",
         "Tauri"
-      ]
+      ],
+      "title": "Sudoku"
     },
     {
-      "title": "Channel watcher bot",
-      "repo": "channels-watcher-bot",
       "description": "Telegram bot to watch groups and channels and notify you when it matches a configured filter",
-      "skills": ["Python", "Docker", "Prisma"]
+      "repo": "channels-watcher-bot",
+      "skills": ["Python", "Docker", "Prisma"],
+      "title": "Channel watcher bot"
     },
     {
-      "title": "Blog markup example",
       "repo": "blog-markup-example",
-      "web": "https://blog-markup-example.xeraph.dev",
       "skills": [
         "Html5",
         "Css3",
@@ -93,13 +144,13 @@
         "Iconify",
         "Alpine.js",
         "Vercel"
-      ]
+      ],
+      "title": "Blog markup example",
+      "web": "https://blog-markup-example.xeraph.dev"
     },
     {
-      "title": "Portfolio v3",
-      "repo": "portfolio-v3",
-      "web": "https://v3.xeraph.dev",
       "description": "Version 3 of my portfolio",
+      "repo": "portfolio-v3",
       "skills": [
         "Html5",
         "Css3",
@@ -108,49 +159,49 @@
         "Astro",
         "TailwindCSS",
         "Vercel"
-      ]
+      ],
+      "title": "Portfolio v3",
+      "web": "https://v3.xeraph.dev"
     },
     {
-      "title": "Challenge Search flights",
       "repo": "challenge-search-flights",
-      "web": "https://challenge-search-flights.xeraph.dev/",
-      "skills": ["Html5", "Css3", "Sass", "JavaScript", "TypeScript", "Vercel"]
+      "skills": ["Html5", "Css3", "Sass", "JavaScript", "TypeScript", "Vercel"],
+      "title": "Challenge Search flights",
+      "web": "https://challenge-search-flights.xeraph.dev/"
     },
     {
-      "title": "Challenge Chart",
       "repo": "challenge-chart",
-      "web": "https://challenge-chart.xeraph.dev/",
-      "skills": ["Html5", "Css3", "Sass", "JavaScript", "TypeScript", "Vercel"]
+      "skills": ["Html5", "Css3", "Sass", "JavaScript", "TypeScript", "Vercel"],
+      "title": "Challenge Chart",
+      "web": "https://challenge-chart.xeraph.dev/"
     },
     {
-      "title": "VM Translator",
       "description": "A VM Translator for Hack VM",
       "repo": "vm-translator",
-      "skills": ["Haskell"]
+      "skills": ["Haskell"],
+      "title": "VM Translator"
     },
     {
-      "title": "Hack Assembler",
       "description": "An Assembler for Hack Assembly",
       "repo": "hack-assembler",
-      "skills": ["Haskell"]
+      "skills": ["Haskell"],
+      "title": "Hack Assembler"
     },
     {
-      "title": "Space Invaders",
       "description": "Simple Space Invaders game written in Racket",
       "repo": "space-invaders.rkt",
-      "skills": ["Racket"]
+      "skills": ["Racket"],
+      "title": "Space Invaders"
     },
     {
-      "title": "Portfolio v2",
       "description": "Version 2 of my portfolio",
       "repo": "portfolio",
-      "web": "https://v2.xeraph.dev/",
-      "skills": ["Html5", "Css3", "PostCSS", "React.js", "Vercel"]
+      "skills": ["Html5", "Css3", "PostCSS", "React.js", "Vercel"],
+      "title": "Portfolio v2",
+      "web": "https://v2.xeraph.dev/"
     },
     {
-      "title": "Challenge accordion",
       "repo": "challenge-accordion",
-      "web": "https://accordion-challenge.xeraph.dev",
       "skills": [
         "Html5",
         "Css3",
@@ -159,32 +210,33 @@
         "TypeScript",
         "React.js",
         "Vercel"
-      ]
+      ],
+      "title": "Challenge accordion",
+      "web": "https://accordion-challenge.xeraph.dev"
     },
     {
-      "title": "Challenge vacations api",
       "repo": "challenge-vacations-api",
-      "skills": ["JavaScript", "TypeScript", "Node.js", "Express.js"]
+      "skills": ["JavaScript", "TypeScript", "Node.js", "Express.js"],
+      "title": "Challenge vacations api"
     },
     {
-      "title": "Full-stack interview",
       "repo": "full-stack-interview",
-      "skills": ["Html5", "Css3", "JavaScript", "TypeScript", "React.js"]
+      "skills": ["Html5", "Css3", "JavaScript", "TypeScript", "React.js"],
+      "title": "Full-stack interview"
     },
     {
-      "title": "Dual repo",
       "description": "An utility to update a repo from another repo",
       "repo": "dual_repo",
-      "skills": ["JavaScript", "Node.js"]
+      "skills": ["JavaScript", "Node.js"],
+      "title": "Dual repo"
     },
     {
-      "title": "Auth with tweetnacl",
       "description": "Simple auth example with tweetnacl",
       "repo": "auth-with-tweetnacl",
-      "skills": ["Html5", "JavaScript", "Node.js"]
+      "skills": ["Html5", "JavaScript", "Node.js"],
+      "title": "Auth with tweetnacl"
     },
     {
-      "title": "Client CRUD Challeng",
       "description": "Client of a CRUD application challenge",
       "repo": "challenge-crud-students-admin",
       "skills": [
@@ -196,19 +248,24 @@
         "React.js",
         "Next.js",
         "Material UI"
-      ]
+      ],
+      "title": "Client CRUD Challeng"
     },
     {
-      "title": "Server CRUD Challenge",
       "description": "Server of a CRUD application challenge",
       "repo": "challenge-crud-students-server",
-      "skills": ["JavaScript", "TypeScript", "Node.js", "Express.js", "MongoDB"]
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ],
+      "title": "Server CRUD Challenge"
     },
     {
-      "title": "Slidercards",
       "description": "Slidecards challenge",
       "repo": "slidercards",
-      "web": "https://slidercards.xeraph.dev",
       "skills": [
         "Html5",
         "Css3",
@@ -218,19 +275,19 @@
         "Next.js",
         "Styled Components",
         "Vercel"
-      ]
+      ],
+      "title": "Slidercards",
+      "web": "https://slidercards.xeraph.dev"
     },
     {
-      "title": "BettyCook",
       "description": "A recipe book",
       "repo": "bettycook",
-      "skills": ["Dart", "Flutter"]
+      "skills": ["Dart", "Flutter"],
+      "title": "BettyCook"
     },
     {
-      "title": "Portfolio v1",
-      "repo": "porfolio",
-      "web": "https://v1.xeraph.dev",
       "description": "My first portfolio",
+      "repo": "porfolio",
       "skills": [
         "Html5",
         "Css3",
@@ -241,14 +298,26 @@
         "Material UI",
         "Framer",
         "Vercel"
-      ]
+      ],
+      "title": "Portfolio v1",
+      "web": "https://v1.xeraph.dev"
     }
   ],
+  "site": "https://xeraph.dev",
+  "social": {
+    "GitHub": "https://github.com/adrianrl99",
+    "Linkedin": "https://www.linkedin.com/in/adrian-lópez/",
+    "Telegram": "https://t.me/fourblues",
+    "Twitter": "https://twitter.com/Adrianrlc"
+  },
+  "utilLinks": {
+    "dotfiles": "https://github.com/adrianrl99/dotfiles",
+    "vscode": "/vscode"
+  },
+  "version": 4,
   "works": [
     {
       "company": "Divertimento",
-      "start": "2022-11",
-      "web": "https://github.com/divertimento",
       "skills": [
         "Html5",
         "Css3",
@@ -258,19 +327,26 @@
         "Material UI",
         "Git",
         "GitHub"
-      ]
+      ],
+      "start": "2022-11",
+      "web": "https://github.com/divertimento"
     },
     {
       "company": "Freelance",
-      "start": "2022-9",
       "end": "2022-11",
-      "skills": ["Html5", "Css3", "JavaScript", "React.js", "Ant Design", "Sap"]
+      "skills": [
+        "Html5",
+        "Css3",
+        "JavaScript",
+        "React.js",
+        "Ant Design",
+        "Sap"
+      ],
+      "start": "2022-9"
     },
     {
       "company": "Divertimento",
-      "start": "2022-3",
       "end": "2022-8",
-      "web": "https://github.com/divertimento",
       "skills": [
         "Html5",
         "Css3",
@@ -283,13 +359,13 @@
         "Express.js",
         "Git",
         "GitHub"
-      ]
+      ],
+      "start": "2022-3",
+      "web": "https://github.com/divertimento"
     },
     {
       "company": "IJP Software",
-      "start": "2021-7",
       "end": "2022-7",
-      "web": "https://github.com/IJPSoftware",
       "skills": [
         "Html5",
         "Css3",
@@ -308,13 +384,13 @@
         "GitHub",
         "Bash",
         "Docker"
-      ]
+      ],
+      "start": "2021-7",
+      "web": "https://github.com/IJPSoftware"
     },
     {
       "company": "Xetid",
-      "start": "2019-10",
       "end": "2021-8",
-      "web": "https://www.xetid.cu/",
       "skills": [
         "Html5",
         "Css3",
@@ -325,71 +401,9 @@
         "PostgreSQL",
         "Debian",
         "Linux"
-      ]
+      ],
+      "start": "2019-10",
+      "web": "https://www.xetid.cu/"
     }
-  ],
-  "icons": {
-    "Html5": "vscode-icons:file-type-html",
-    "Css3": "vscode-icons:file-type-css",
-    "JavaScript": "vscode-icons:file-type-js-official",
-    "TypeScript": "vscode-icons:file-type-typescript-official",
-    "Rust": "vscode-icons:file-type-rust",
-    "php": "logos:php",
-    "Bash": "logos:bash-icon",
-    "Dart": "logos:dart",
-    "Racket": "vscode-icons:file-type-racket",
-    "Haskell": "logos:haskell-icon",
-    "Python": "logos:python",
-    "Swift": "vscode-icons:file-type-swift",
-    "MDX": "vscode-icons:file-type-mdx",
-    "Sass": "logos:sass",
-    "Styled Components": "vscode-icons:file-type-styled",
-    "PostCSS": "vscode-icons:file-type-postcss",
-    "Bootstrap": "logos:bootstrap",
-    "TailwindCSS": "logos:tailwindcss-icon",
-    "SwiftUI": "vscode-icons:file-type-swift",
-    "Flutter": "logos:flutter",
-    "Tauri": "logos:tauri",
-    "JQuery": "simple-icons:jquery",
-    "React.js": "logos:react",
-    "Vue.js": "logos:vue",
-    "Svelte": "logos:svelte-icon",
-    "Alpine.js": "logos:alpinejs-icon",
-    "Material UI": "logos:material-ui",
-    "Chakra UI": "simple-icons:chakraui",
-    "Ant Design": "logos:ant-design",
-    "Mantine": "logos:mantine-icon",
-    "Vuetify": "logos:vuetifyjs",
-    "Framer": "simple-icons:framer",
-    "Swiper.js": "simple-icons:swiper",
-    "Iconify": "simple-icons:iconify",
-    "Context API": "logos:react",
-    "Redux.js": "logos:redux",
-    "Recoil.js": "logos:recoil-icon",
-    "Node.js": "logos:nodejs-icon",
-    "Express.js": "simple-icons:express",
-    "Astro": "vscode-icons:file-type-astro",
-    "Next.js": "vscode-icons:file-type-next",
-    "Nuxt.js": "logos:nuxt-icon",
-    "Prisma": "simple-icons:prisma",
-    "Drupal": "logos:drupal-icon",
-    "PostgreSQL": "logos:postgresql",
-    "MongoDB": "vscode-icons:file-type-mongo",
-    "Docker": "logos:docker-icon",
-    "Linux": "logos:linux-tux",
-    "Debian": "logos:debian",
-    "ArchLinux": "logos:archlinux",
-    "Ubuntu": "logos:ubuntu",
-    "Vercel": "simple-icons:vercel",
-    "Git": "logos:git-icon",
-    "GitHub": "simple-icons:github",
-    "GitLab": "logos:gitlab",
-    "Sap": "simple-icons:sap",
-    "Telegram": "logos:telegram",
-    "Linkedin": "logos:linkedin-icon",
-    "Twitter": "logos:twitter",
-    "Link": "mdi:link",
-    "locale.en": "flag:gb-4x3",
-    "locale.es": "flag:es-4x3"
-  }
+  ]
 }

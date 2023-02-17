@@ -1,0 +1,39 @@
+{
+  "properties": {
+    "vscode": {
+      "additionalProperties": {
+        "properties": {
+          "extensions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "settings": {
+            "type": "object"
+          }
+        },
+        "required": ["extensions"],
+        "type": "object"
+      },
+      "properties": {
+        "Default": {
+          "properties": {
+            "extensions": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "settings": {
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": ["Default"],
+      "type": "object"
+    }
+  }
+}

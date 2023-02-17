@@ -9,5 +9,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("autoprefixer"), require("postcss")],
+  plugins: [
+    require("autoprefixer"),
+    require("postcss"),
+    require("@tailwindcss/line-clamp"),
+  ],
 };

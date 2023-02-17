@@ -24,5 +24,8 @@
   "year_one": "year",
   "year_other": "years",
   "and": "and",
-  "thinkingAboutWrite": "Thinking about what I can write :)"
+  "thinkingAboutWrite": "Thinking about what I can write :)",
+  "vscode_title": "My VSCode extensions and settings",
+  "settings": "Settings",
+  "extensions": "Extensions"
 }

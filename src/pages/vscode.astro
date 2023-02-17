@@ -1,0 +1,184 @@
+---
+import { t, changeLanguage } from "i18next";
+import Layout from "src/layouts/Layout.astro";
+import { Code } from "astro/components";
+import { vscode } from "../../vscode.json";
+import Card from "src/components/Card.astro";
+import Tooltip from "src/components/Tooltip.astro";
+
+changeLanguage("en");
+
+type Data = {
+    results: {
+        extensions: {
+            extensionName: string;
+            shortDescription: string;
+            publisher: {
+                publisherName: string;
+            };
+            versions: {
+                files: {
+                    source: string;
+                }[];
+            }[];
+        }[];
+    }[];
+};
+type Extension = {
+    name: string;
+    image: string;
+    description: string;
+};
+const extensionIds = [
+    ...new Set(Object.values(vscode)
+        .flatMap((el) => el.extensions)
+        .sort()),
+];
+const data: Data = await fetch("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery", {
+    method: "POST",
+    headers: {
+        Accept: "application/json;api-version=3.0-preview.1",
+        "Accept-Encoding": "gzip",
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+        flags: 2 | 512,
+        assetTypes: ["Microsoft.VisualStudio.Services.Icons.Small"],
+        filters: [
+            {
+                pageNumber: 1,
+                pageSize: extensionIds.length,
+                sortBy: 0,
+                sortOrder: 0,
+                criteria: extensionIds.map((el) => ({
+                    filterType: 7,
+                    value: el,
+                })),
+            },
+        ],
+    }),
+}).then((res) => res.json());
+const extensionList = data.results.flatMap((el) => el.extensions.map((el) => [
+    `${el.publisher.publisherName.toLowerCase()}.${el.extensionName.toLowerCase()}`,
+    {
+        name: el.extensionName,
+        description: el.shortDescription,
+        image: el.versions[0]?.files[0]?.source,
+    },
+]));
+const extensions = Object.fromEntries<Extension>(extensionList as any);
+---
+
+<Layout>
+  <section class="container p-2 flex flex-col gap-8">
+    <h1 class="text-5xl pl-6 font-amita">{t("vscode_title")}</h1>
+    <section class="flex flex-col gap-6">
+      <h2 class="text-3xl pl-6 font-amita text-teal-700">Default</h2>
+      <div class="flex flex-col gap-4">
+        <h3 class="text-2xl pl-6 font-amita">{t("settings")}</h3>
+        <Code
+          code={JSON.stringify(vscode.Default.settings, null, 2)}
+          lang="json"
+          theme="dark-plus"
+        />
+      </div>
+      <div class="flex flex-col gap-4">
+        <h3 class="text-2xl pl-6 font-amita">{t("extensions")}</h3>
+        <ul
+          class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        >
+          {
+            vscode.Default.extensions.map((el) => {
+              const ext = extensions[el.toLowerCase()];
+              if (!ext) return null;
+              return (
+                <li>
+                  <Card>
+                    <div class="flex items-center gap-3 h-full p-2">
+                      <img
+                        class="object-contain w-14 h-14"
+                        src={ext.image}
+                        alt="logo"
+                      />
+                      <div class="flex flex-col gap-1">
+                        <Tooltip title={ext.name} placement={"bottom"}>
+                          <h6 class="text-lg line-clamp-1">{ext.name}</h6>
+                        </Tooltip>
+                        <Tooltip title={ext.description} placement={"bottom"}>
+                          <p class="line-clamp-3 break-all">
+                            {ext.description}
+                          </p>
+                        </Tooltip>
+                      </div>
+                    </div>
+                  </Card>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </section>
+    {
+      Object.entries(vscode)
+        .filter(([key]) => key !== "Default")
+        .map(([name, profile]) => (
+          <>
+            <hr class="border-orange-600" />
+            <section class="flex flex-col gap-6">
+              <h2 class="text-3xl pl-6 font-amita text-teal-700">{name}</h2>
+              {(profile as { settings?: object }).settings && (
+                <div class="flex flex-col gap-4">
+                  <h3 class="text-2xl pl-6 font-amita">{t("settings")}</h3>
+                  <Code
+                    code={JSON.stringify(
+                      (profile as { settings?: object }).settings,
+                      null,
+                      2
+                    )}
+                    lang="json"
+                    theme="dark-plus"
+                  />
+                </div>
+              )}
+              <div class="flex flex-col gap-4">
+                <h3 class="text-2xl pl-6 font-amita">{t("extensions")}</h3>
+                <ul class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                  {profile.extensions.map((el) => {
+                    const ext = extensions[el.toLowerCase()];
+                    if (!ext) return null;
+                    return (
+                      <li>
+                        <Card>
+                          <div class="flex items-center gap-3 h-full p-2">
+                            <img
+                              class="object-contain w-14 h-14"
+                              src={ext.image}
+                              alt="logo"
+                            />
+                            <div class="flex flex-col gap-1">
+                              <Tooltip title={ext.name} placement={"bottom"}>
+                                <h6 class="text-lg line-clamp-1">{ext.name}</h6>
+                              </Tooltip>
+                              <Tooltip
+                                title={ext.description}
+                                placement={"bottom"}
+                              >
+                                <p class="line-clamp-3 break-all">
+                                  {ext.description}
+                                </p>
+                              </Tooltip>
+                            </div>
+                          </div>
+                        </Card>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </section>
+          </>
+        ))
+    }
+  </section>
+</Layout>

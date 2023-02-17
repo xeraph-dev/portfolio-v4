@@ -1,0 +1,123 @@
+{
+  "$schema": "./vscode.schema.json",
+  "vscode": {
+    "Default": {
+      "extensions": [
+        "aaron-bond.better-comments",
+        "ultram4rine.vscode-choosealicense",
+        "mikestead.dotenv",
+        "EditorConfig.EditorConfig",
+        "usernamehw.errorlens",
+        "mkxml.vscode-filesize",
+        "miguelsolorio.fluent-icons",
+        "codezombiech.gitignore",
+        "AykutSarac.jsoncrack-vscode",
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "PKief.material-icon-theme",
+        "christian-kohler.path-intellisense",
+        "richie5um2.vscode-sort-json",
+        "jock.svg",
+        "SimonSiefke.svg-preview",
+        "wayou.vscode-todo-highlight"
+      ],
+      "settings": {
+        "[html]": {
+          "editor.foldingStrategy": "indentation"
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "editor.accessibilitySupport": "off",
+        "editor.fontFamily": "JetBrainsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+        "editor.fontLigatures": true,
+        "editor.formatOnSave": true,
+        "editor.guides.bracketPairs": true,
+        "editor.hover.delay": 500,
+        "editor.linkedEditing": true,
+        "editor.minimap.enabled": false,
+        "editor.renderWhitespace": "trailing",
+        "editor.suggestSelection": "first",
+        "editor.tabSize": 2,
+        "explorer.confirmDelete": false,
+        "files.associations": {
+          "LICENSE": "plaintext"
+        },
+        "files.autoSave": "off",
+        "git.autofetch": false,
+        "git.confirmSync": false,
+        "git.enableSmartCommit": true,
+        "git.openRepositoryInParentFolders": "never",
+        "html.validate.scripts": true,
+        "html.validate.styles": true,
+        "license.author": "Adrian López",
+        "license.extension": "",
+        "markdownlint.config": {
+          "MD001": false
+        },
+        "workbench.colorTheme": "Default Dark+ Experimental",
+        "workbench.iconTheme": "material-icon-theme",
+        "workbench.productIconTheme": "fluent-icons",
+        "workbench.startupEditor": "none"
+      }
+    },
+    "bash": {
+      "extensions": [
+        "mads-hartmann.bash-ide-vscode",
+        "foxundermoon.shell-format",
+        "timonwong.shellcheck"
+      ]
+    },
+    "dotnet": {
+      "extensions": [
+        "ms-vscode.azure-account",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-dotnettools.csharp",
+        "Ionide.Ionide-fsharp",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-dotnettools.dotnet-interactive-vscode"
+      ]
+    },
+    "go": {
+      "extensions": ["golang.go"]
+    },
+    "javascript": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "mgmcdermott.vscode-language-babel",
+        "kamikillerto.vscode-colorize",
+        "dbaeumer.vscode-eslint",
+        "heybourn.headwind",
+        "ecmel.vscode-html-css",
+        "HTMLHint.vscode-htmlhint",
+        "kisstkondoros.vscode-gutter-preview",
+        "wix.vscode-import-cost",
+        "xabikos.JavaScriptSnippets",
+        "esbenp.prettier-vscode",
+        "Prisma.prisma",
+        "stylelint.vscode-stylelint",
+        "henrikvilhelmberglund.tailwindcss-highlight-henrikvilhelmberglund",
+        "bradlc.vscode-tailwindcss",
+        "webhint.vscode-webhint"
+      ]
+    },
+    "python": {
+      "extensions": [
+        "ms-python.isort",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "KevinRose.vsc-python-indent"
+      ]
+    }
+  }
+}
