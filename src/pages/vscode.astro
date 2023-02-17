@@ -9,63 +9,70 @@ import Tooltip from "src/components/Tooltip.astro";
 changeLanguage("en");
 
 type Data = {
-    results: {
-        extensions: {
-            extensionName: string;
-            shortDescription: string;
-            publisher: {
-                publisherName: string;
-            };
-            versions: {
-                files: {
-                    source: string;
-                }[];
-            }[];
+  results: {
+    extensions: {
+      extensionName: string;
+      shortDescription: string;
+      publisher: {
+        publisherName: string;
+      };
+      versions: {
+        files: {
+          source: string;
         }[];
+      }[];
     }[];
+  }[];
 };
 type Extension = {
-    name: string;
-    image: string;
-    description: string;
+  name: string;
+  image: string;
+  description: string;
 };
 const extensionIds = [
-    ...new Set(Object.values(vscode)
-        .flatMap((el) => el.extensions)
-        .sort()),
+  ...new Set(
+    Object.values(vscode)
+      .flatMap((el) => el.extensions)
+      .sort()
+  ),
 ];
-const data: Data = await fetch("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery", {
+const data: Data = await fetch(
+  "https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery",
+  {
     method: "POST",
     headers: {
-        Accept: "application/json;api-version=3.0-preview.1",
-        "Accept-Encoding": "gzip",
-        "Content-Type": "application/json",
+      Accept: "application/json;api-version=3.0-preview.1",
+      "Accept-Encoding": "gzip",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
-        flags: 2 | 512,
-        assetTypes: ["Microsoft.VisualStudio.Services.Icons.Small"],
-        filters: [
-            {
-                pageNumber: 1,
-                pageSize: extensionIds.length,
-                sortBy: 0,
-                sortOrder: 0,
-                criteria: extensionIds.map((el) => ({
-                    filterType: 7,
-                    value: el,
-                })),
-            },
-        ],
+      flags: 2 | 512,
+      assetTypes: ["Microsoft.VisualStudio.Services.Icons.Small"],
+      filters: [
+        {
+          pageNumber: 1,
+          pageSize: extensionIds.length,
+          sortBy: 0,
+          sortOrder: 0,
+          criteria: extensionIds.map((el) => ({
+            filterType: 7,
+            value: el,
+          })),
+        },
+      ],
     }),
-}).then((res) => res.json());
-const extensionList = data.results.flatMap((el) => el.extensions.map((el) => [
+  }
+).then((res) => res.json());
+const extensionList = data.results.flatMap((el) =>
+  el.extensions.map((el) => [
     `${el.publisher.publisherName.toLowerCase()}.${el.extensionName.toLowerCase()}`,
     {
-        name: el.extensionName,
-        description: el.shortDescription,
-        image: el.versions[0]?.files[0]?.source,
+      name: el.extensionName,
+      description: el.shortDescription,
+      image: el.versions[0]?.files[0]?.source,
     },
-]));
+  ])
+);
 const extensions = Object.fromEntries<Extension>(extensionList as any);
 ---
 
@@ -102,10 +109,12 @@ const extensions = Object.fromEntries<Extension>(extensionList as any);
                       />
                       <div class="flex flex-col gap-1">
                         <Tooltip title={ext.name} placement={"bottom"}>
-                          <h6 class="text-lg line-clamp-1">{ext.name}</h6>
+                          <h6 class="text-lg line-clamp-1 font-bold">
+                            {ext.name}
+                          </h6>
                         </Tooltip>
                         <Tooltip title={ext.description} placement={"bottom"}>
-                          <p class="line-clamp-3 break-all">
+                          <p class="line-clamp-3 break-all text-slate-400">
                             {ext.description}
                           </p>
                         </Tooltip>
