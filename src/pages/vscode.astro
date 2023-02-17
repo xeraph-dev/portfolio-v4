@@ -69,7 +69,7 @@ const extensionList = data.results.flatMap((el) => el.extensions.map((el) => [
 const extensions = Object.fromEntries<Extension>(extensionList as any);
 ---
 
-<Layout>
+<Layout title="VSCode" description={t("vscode_title")}>
   <section class="container p-2 flex flex-col gap-8">
     <h1 class="text-5xl pl-6 font-amita">{t("vscode_title")}</h1>
     <section class="flex flex-col gap-6">

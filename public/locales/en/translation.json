@@ -27,5 +27,7 @@
   "thinkingAboutWrite": "Thinking about what I can write :)",
   "vscode_title": "My Visual Studio Code extensions and settings",
   "settings": "Settings",
-  "extensions": "Extensions"
+  "extensions": "Extensions",
+  "siteDescription": "My personal portfolio",
+  "siteTitle": "Adrian López portfolio"
 }
