@@ -13,6 +13,7 @@ type Data = {
         extensions: {
             extensionName: string;
             shortDescription: string;
+            displayName: string;
             publisher: {
                 publisherName: string;
             };
@@ -61,7 +62,7 @@ const data: Data = await fetch("https://marketplace.visualstudio.com/_apis/publi
 const extensionList = data.results.flatMap((el) => el.extensions.map((el) => [
     `${el.publisher.publisherName.toLowerCase()}.${el.extensionName.toLowerCase()}`,
     {
-        name: el.extensionName,
+        name: el.displayName,
         description: el.shortDescription,
         image: el.versions[0]?.files[0]?.source,
     },
@@ -102,10 +103,12 @@ const extensions = Object.fromEntries<Extension>(extensionList as any);
                       />
                       <div class="flex flex-col gap-1">
                         <Tooltip title={ext.name} placement={"bottom"}>
-                          <h6 class="text-lg line-clamp-1">{ext.name}</h6>
+                          <h6 class="text-lg line-clamp-1 font-bold">
+                            {ext.name}
+                          </h6>
                         </Tooltip>
                         <Tooltip title={ext.description} placement={"bottom"}>
-                          <p class="line-clamp-3 break-all">
+                          <p class="line-clamp-3 break-all text-slate-400">
                             {ext.description}
                           </p>
                         </Tooltip>
@@ -158,13 +161,15 @@ const extensions = Object.fromEntries<Extension>(extensionList as any);
                             />
                             <div class="flex flex-col gap-1">
                               <Tooltip title={ext.name} placement={"bottom"}>
-                                <h6 class="text-lg line-clamp-1">{ext.name}</h6>
+                                <h6 class="text-lg line-clamp-1 font-bold">
+                                  {ext.name}
+                                </h6>
                               </Tooltip>
                               <Tooltip
                                 title={ext.description}
                                 placement={"bottom"}
                               >
-                                <p class="line-clamp-3 break-all">
+                                <p class="line-clamp-3 break-all text-slate-400">
                                   {ext.description}
                                 </p>
                               </Tooltip>
