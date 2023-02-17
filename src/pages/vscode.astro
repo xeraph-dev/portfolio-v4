@@ -13,6 +13,7 @@ type Data = {
     extensions: {
       extensionName: string;
       shortDescription: string;
+      displayName: string;
       publisher: {
         publisherName: string;
       };
@@ -67,7 +68,7 @@ const extensionList = data.results.flatMap((el) =>
   el.extensions.map((el) => [
     `${el.publisher.publisherName.toLowerCase()}.${el.extensionName.toLowerCase()}`,
     {
-      name: el.extensionName,
+      name: el.displayName,
       description: el.shortDescription,
       image: el.versions[0]?.files[0]?.source,
     },
