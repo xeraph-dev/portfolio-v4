@@ -308,11 +308,12 @@
     "GitHub": "https://github.com/adrianrl99",
     "Linkedin": "https://www.linkedin.com/in/adrian-lópez/",
     "Telegram": "https://t.me/fourblues",
-    "Twitter": "https://twitter.com/Adrianrlc"
+    "Twitter": "https://twitter.com/xeraphdev"
   },
   "utilLinks": {
     "dotfiles": "https://github.com/adrianrl99/dotfiles",
-    "vscode": "/vscode"
+    "vscode": "/vscode",
+    "eslint-prettier": "/eslint-prettier"
   },
   "version": 4,
   "works": [

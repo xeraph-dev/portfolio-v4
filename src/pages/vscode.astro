@@ -71,12 +71,12 @@ const extensions = Object.fromEntries<Extension>(extensionList as any);
 ---
 
 <Layout title="VSCode" description={t("vscode_title")}>
-  <section class="container p-2 flex flex-col gap-8">
-    <h1 class="text-5xl pl-6 font-amita">{t("vscode_title")}</h1>
+  <section class="container flex flex-col gap-8 p-2">
+    <h1 class="pl-6 text-5xl font-amita">{t("vscode_title")}</h1>
     <section class="flex flex-col gap-6">
-      <h2 class="text-3xl pl-6 font-amita text-teal-700">Default</h2>
+      <h2 class="pl-6 text-3xl text-teal-700 font-amita">Default</h2>
       <div class="flex flex-col gap-4">
-        <h3 class="text-2xl pl-6 font-amita">{t("settings")}</h3>
+        <h3 class="pl-6 text-2xl font-amita">{t("settings")}</h3>
         <Code
           code={JSON.stringify(vscode.Default.settings, null, 2)}
           lang="json"
@@ -84,7 +84,7 @@ const extensions = Object.fromEntries<Extension>(extensionList as any);
         />
       </div>
       <div class="flex flex-col gap-4">
-        <h3 class="text-2xl pl-6 font-amita">{t("extensions")}</h3>
+        <h3 class="pl-6 text-2xl font-amita">{t("extensions")}</h3>
         <ul
           class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         >
@@ -94,27 +94,32 @@ const extensions = Object.fromEntries<Extension>(extensionList as any);
               if (!ext) return null;
               return (
                 <li>
-                  <Card>
-                    <div class="flex items-center gap-3 h-full p-2">
-                      <img
-                        class="object-contain w-14 h-14"
-                        src={ext.image}
-                        alt="logo"
-                      />
-                      <div class="flex flex-col gap-1">
-                        <Tooltip title={ext.name} placement={"bottom"}>
-                          <h6 class="text-lg line-clamp-1 font-bold">
-                            {ext.name}
-                          </h6>
-                        </Tooltip>
-                        <Tooltip title={ext.description} placement={"bottom"}>
-                          <p class="line-clamp-3 break-all text-slate-400">
-                            {ext.description}
-                          </p>
-                        </Tooltip>
+                  <a
+                    href={`https://marketplace.visualstudio.com/items?itemName=${el}`}
+                    target="_blank"
+                  >
+                    <Card>
+                      <div class="flex items-center h-full gap-3 p-2">
+                        <img
+                          class="object-contain w-14 h-14"
+                          src={ext.image}
+                          alt="logo"
+                        />
+                        <div class="flex flex-col gap-1">
+                          <Tooltip title={ext.name} placement={"bottom"}>
+                            <h6 class="text-lg font-bold line-clamp-1">
+                              {ext.name}
+                            </h6>
+                          </Tooltip>
+                          <Tooltip title={ext.description} placement={"bottom"}>
+                            <p class="break-all line-clamp-3 text-slate-400">
+                              {ext.description}
+                            </p>
+                          </Tooltip>
+                        </div>
                       </div>
-                    </div>
-                  </Card>
+                    </Card>
+                  </a>
                 </li>
               );
             })
@@ -129,10 +134,10 @@ const extensions = Object.fromEntries<Extension>(extensionList as any);
           <>
             <hr class="border-orange-600" />
             <section class="flex flex-col gap-6">
-              <h2 class="text-3xl pl-6 font-amita text-teal-700">{name}</h2>
+              <h2 class="pl-6 text-3xl text-teal-700 font-amita">{name}</h2>
               {(profile as { settings?: object }).settings && (
                 <div class="flex flex-col gap-4">
-                  <h3 class="text-2xl pl-6 font-amita">{t("settings")}</h3>
+                  <h3 class="pl-6 text-2xl font-amita">{t("settings")}</h3>
                   <Code
                     code={JSON.stringify(
                       (profile as { settings?: object }).settings,
@@ -145,37 +150,42 @@ const extensions = Object.fromEntries<Extension>(extensionList as any);
                 </div>
               )}
               <div class="flex flex-col gap-4">
-                <h3 class="text-2xl pl-6 font-amita">{t("extensions")}</h3>
+                <h3 class="pl-6 text-2xl font-amita">{t("extensions")}</h3>
                 <ul class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                   {profile.extensions.map((el) => {
                     const ext = extensions[el.toLowerCase()];
                     if (!ext) return null;
                     return (
                       <li>
-                        <Card>
-                          <div class="flex items-center gap-3 h-full p-2">
-                            <img
-                              class="object-contain w-14 h-14"
-                              src={ext.image}
-                              alt="logo"
-                            />
-                            <div class="flex flex-col gap-1">
-                              <Tooltip title={ext.name} placement={"bottom"}>
-                                <h6 class="text-lg line-clamp-1 font-bold">
-                                  {ext.name}
-                                </h6>
-                              </Tooltip>
-                              <Tooltip
-                                title={ext.description}
-                                placement={"bottom"}
-                              >
-                                <p class="line-clamp-3 break-all text-slate-400">
-                                  {ext.description}
-                                </p>
-                              </Tooltip>
+                        <a
+                          href={`https://marketplace.visualstudio.com/items?itemName=${el}`}
+                          target="_blank"
+                        >
+                          <Card>
+                            <div class="flex items-center h-full gap-3 p-2">
+                              <img
+                                class="object-contain w-14 h-14"
+                                src={ext.image}
+                                alt="logo"
+                              />
+                              <div class="flex flex-col gap-1">
+                                <Tooltip title={ext.name} placement={"bottom"}>
+                                  <h6 class="text-lg font-bold line-clamp-1">
+                                    {ext.name}
+                                  </h6>
+                                </Tooltip>
+                                <Tooltip
+                                  title={ext.description}
+                                  placement={"bottom"}
+                                >
+                                  <p class="break-all line-clamp-3 text-slate-400">
+                                    {ext.description}
+                                  </p>
+                                </Tooltip>
+                              </div>
                             </div>
-                          </div>
-                        </Card>
+                          </Card>
+                        </a>
                       </li>
                     );
                   })}

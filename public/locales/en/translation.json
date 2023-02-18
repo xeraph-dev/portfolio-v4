@@ -29,5 +29,12 @@
   "settings": "Settings",
   "extensions": "Extensions",
   "siteDescription": "My personal portfolio",
-  "siteTitle": "Adrian López portfolio"
+  "siteTitle": "Adrian López portfolio",
+  "eslint_title": "My ESLint and Prettier configurations",
+  "download": "download",
+  "copy": "copy",
+  "command": "Command",
+  "command_copied": "Command copied to clipboard",
+  "eslint_copied": "ESLint copied to clipboard",
+  "prettier_copied": "Prettier copied to clipboard"
 }

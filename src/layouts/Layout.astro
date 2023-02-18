@@ -31,9 +31,9 @@ const combinedTitle = title ? `${title} | ${baseTitle}` : baseTitle;
     <meta name="color-scheme" content="dark" />
     <HeadHrefLangs />
   </head>
-  <body class="font-nunito">
+  <body class="font-nunito accent-orange-600">
     <div
-      class="bg-slate-900 min-h-screen text-slate-300 flex flex-col items-center gap-4"
+      class="flex flex-col items-center min-h-screen gap-4 bg-slate-900 text-slate-300"
     >
       <Header />
       <main class="container flex flex-col grow">
@@ -61,5 +61,11 @@ const combinedTitle = title ? `${title} | ${baseTitle}` : baseTitle;
         @apply bg-slate-50 rounded-full;
       }
     </style>
+    <script>
+      import { SvelteToast } from "@zerodevx/svelte-toast";
+      new SvelteToast({
+        target: document.body,
+      });
+    </script>
   </body>
 </html>

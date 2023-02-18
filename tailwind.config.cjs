@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        amita: ["Amita", "sans-serif"],
+        amita: ["Amita", "sans-erif"],
         nunito: ["Nunito", "sans-serif"],
       },
     },

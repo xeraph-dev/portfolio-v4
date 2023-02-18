@@ -10,22 +10,22 @@ import Icon from "./Icon.astro";
 ---
 
 <Navbar>
-  <div class="flex gap-3 items-center">
-    <a href={localizePath("/")} class="font-amita font-bold text-cyan-600">
+  <div class="flex items-center gap-3">
+    <a href={localizePath("/")} class="font-bold font-amita text-cyan-600">
       Xeraph
     </a>
-    <ul class="gap-2 flex">
+    <ul class="flex gap-2">
       <li>
         <NavLink href={localizePath("/blog")}>{t("blog")}</NavLink>
       </li>
     </ul>
   </div>
-  <div class="flex gap-3 items-center">
+  <div class="flex items-center gap-3">
     <span
-      class="py-1 px-2 rounded-md hover:bg-slate-900 hover:shadow-sm transition"
+      class="px-2 py-1 transition rounded-md hover:bg-slate-900 hover:shadow-sm"
     >
       <Tooltip title={t("change_language")} placement="bottom">
-        <LanguageSelector showFlag class="outline-none bg-transparent" />
+        <LanguageSelector showFlag class="bg-transparent outline-none" />
       </Tooltip>
     </span>
     <Tooltip title={t("go_to_repository")} placement="bottom">

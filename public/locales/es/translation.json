@@ -29,5 +29,12 @@
   "settings": "Configuraciones",
   "extensions": "Extensiones",
   "siteDescription": "Mi portafolio personal",
-  "siteTitle": "Portafolio de Adrian López"
+  "siteTitle": "Portafolio de Adrian López",
+  "eslint_title": "Mis configuraciones de ESLint y Prettier",
+  "download": "descargar",
+  "copy": "copiar",
+  "command": "Comando",
+  "command_copied": "Comando copiado al portapapeles",
+  "eslint_copied": "ESLint copiado al portapapeles",
+  "prettier_copied": "Prettier copiado al portapapeles"
 }

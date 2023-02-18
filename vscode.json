@@ -1,5 +1,11 @@
 {
   "$schema": "./vscode.schema.json",
+  "php": {
+    "extensions": [
+      "bmewburn.vscode-intelephense-client",
+      "zobo.php-intellisense"
+    ]
+  },
   "vscode": {
     "Default": {
       "extensions": [
@@ -84,7 +90,7 @@
       ]
     },
     "go": {
-      "extensions": ["golang.go"]
+      "extensions": ["golang.go", "premparihar.gotestexplorer"]
     },
     "javascript": {
       "extensions": [
@@ -101,6 +107,7 @@
         "esbenp.prettier-vscode",
         "Prisma.prisma",
         "stylelint.vscode-stylelint",
+        "svelte.svelte-vscode",
         "henrikvilhelmberglund.tailwindcss-highlight-henrikvilhelmberglund",
         "bradlc.vscode-tailwindcss",
         "webhint.vscode-webhint"
