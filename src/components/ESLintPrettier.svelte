@@ -314,13 +314,13 @@ module.exports = {
 }`.replace(/^\s*\n/gm, "");
 
   function copy(code) {
+    const copyEl = document.getElementById("copy-area");
     const el = document.createElement("textarea");
-    el.style.display = "none";
     el.value = code;
-    document.body.appendChild(el);
+    copyEl.appendChild(el);
     el.select();
     document.execCommand("copy");
-    document.body.removeChild(el);
+    copyEl.removeChild(el);
   }
 
   function download(name, code) {
