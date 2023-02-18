@@ -20,6 +20,7 @@
   let withNext = true;
   let withAstro = false;
   let withTailwind = false;
+  let withSvelte = false;
   let pm = "npm";
 
   $: if (withNext | withReact) {
@@ -53,6 +54,11 @@
       if (withAstro) {
         command += " ";
         command += ["prettier-plugin-astro"].join(" ");
+      }
+
+      if (withSvelte) {
+        command += " ";
+        command += ["prettier-plugin-svelte"].join(" ");
       }
 
       if (withTailwind) {
@@ -108,6 +114,11 @@
         command += " ";
         command += ["eslint-plugin-astro"].join(" ");
       }
+
+      if (withSvelte) {
+        command += " ";
+        command += ["eslint-plugin-svelte3"].join(" ");
+      }
     }
   }
 
@@ -152,7 +163,7 @@ module.exports = {
     'unicorn/consistent-function-scoping': 'off',
   },
   ${
-    withTypeScript || withReact || withAstro
+    withTypeScript || withReact || withAstro || withSvelte
       ? `overrides: [
     ${
       withTypeScript
@@ -228,6 +239,23 @@ module.exports = {
     },`
         : ""
     }
+    ${
+      withSvelte
+        ? `{
+      files: ['*.svelte'],
+      processor: 'svelte3/svelte3',
+	  ${withTypeScript ? `extends: ['plugin:@typescript-eslint/recommended']` : ""},
+      plugins: ['svelte3'${withTypeScript ? ", '@typescript-eslint'" : ""}],
+      ${
+        withTypeScript
+          ? `settings: {
+		'svelte3/typescript': () => require('typescript')
+	  },`
+          : ""
+      }
+    },`
+        : ""
+    }
   ],`
       : ""
   }
@@ -236,15 +264,16 @@ module.exports = {
   $: prettierrc = `/** @type {import('prettier').Options} */
 module.exports = {
   ${
-    withAstro || withTailwind
+    withAstro || withTailwind || withSvelte
       ? `plugins: [
     ${withAstro ? "require.resolve('prettier-plugin-astro')," : ""}
     ${withTailwind ? "require.resolve('prettier-plugin-tailwindcss')," : ""}
+    ${withSvelte ? "require.resolve('prettier-plugin-svelte')," : ""}
   ],`
       : ""
   }
   ${
-    withAstro
+    withAstro || withSvelte
       ? `overrides: [
     ${
       withAstro
@@ -252,6 +281,16 @@ module.exports = {
       files: '*.astro',
       options: {
         parser: 'astro',
+      },
+    },`
+        : ""
+    }
+    ${
+      withSvelte
+        ? `{
+      files: "*.svelte",
+      options: {
+        parser: "svelte",
       },
     },`
         : ""
@@ -265,7 +304,7 @@ module.exports = {
   bracketSpacing: true,
   endOfLine: 'lf',
   jsxSingleQuote: false,
-  printWidth: 80,
+  printWidth: 100,
   quoteProps: 'as-needed',
   semi: false,
   useTabs: false,
@@ -352,6 +391,10 @@ module.exports = {
   <label class="flex gap-1 items-center">
     <input bind:checked={withAstro} type="checkbox" />
     Astro
+  </label>
+  <label class="flex gap-1 items-center">
+    <input bind:checked={withSvelte} type="checkbox" />
+    Svelte
   </label>
   <label class="flex gap-1 items-center">
     <input bind:checked={withTailwind} type="checkbox" />
