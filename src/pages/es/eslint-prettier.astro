@@ -1,0 +1,22 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import ESLintPrettier from "src/components/ESLintPrettier.svelte";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("es");
+---
+
+<Layout title="ESlint" description={t("eslint_title")}>
+  <section class="container flex flex-col gap-8 p-2">
+    <h1 class="pl-6 text-5xl font-amita">{t("eslint_title")}</h1>
+    <ESLintPrettier
+      client:load
+      downloadText={t("download") as string}
+      commandText={t("command") as string}
+      copyText={t("copy") as string}
+      commandCopiedText={t("command_copied") as string}
+      eslintCopiedText={t("eslint_copied") as string}
+      prettierCopiedText={t("prettier_copied") as string}
+    />
+  </section>
+</Layout>
