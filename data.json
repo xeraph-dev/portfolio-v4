@@ -74,15 +74,8 @@
       "PostCSS"
     ],
     "deploy": ["Vercel"],
-    "front-end": [
-      "React.js",
-      "Next.js",
-      "Vue.js",
-      "Nuxt.js",
-      "Astro",
-      "SwiftUI"
-    ],
-    "languages": ["Html5", "Css3", "JavaScript", "TypeScript", "Swift", "Rust"],
+    "front-end": ["React.js", "Next.js", "Vue.js", "Nuxt.js", "Astro"],
+    "languages": ["Html5", "Css3", "JavaScript", "TypeScript"],
     "linux": ["Bash", "Docker", "Linux", "Ubuntu", "ArchLinux"],
     "state_management": ["Context API", "Redux.js", "Recoil.js"],
     "ui_framework": [
