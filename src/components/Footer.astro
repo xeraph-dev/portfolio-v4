@@ -35,30 +35,5 @@ import Icon from "./Icon.astro";
         ))
       }
     </ul>
-    <div class="flex gap-2 italic">
-      <span class="text-slate-400 max-sm:hidden">{t("versions")}:</span>
-      <ul class="flex gap-2">
-        {
-          Array(data.version - 1)
-            .fill(0)
-            .map((_, i) => {
-              const version = i + 1;
-              const href = new URL(data.site);
-              href.host = `v${version}.${href.host}`;
-              return (
-                <li>
-                  <a
-                    class="text-amber-700"
-                    href={href.toString()}
-                    target="_blank"
-                  >
-                    v{version}
-                  </a>
-                </li>
-              );
-            })
-        }
-      </ul>
-    </div>
   </div>
 </footer>

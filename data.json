@@ -87,7 +87,7 @@
     ],
     "version_control": ["Git", "GitHub", "GitLab"]
   },
-  "projectRepository": "https://github.com/adrianrl99/portfolio-v4",
+  "projectRepository": "https://github.com/xeraph-dev/portfolio-v4",
   "projects": [
     {
       "description": "Version 4 of my portfolio (this)",
@@ -298,13 +298,13 @@
   ],
   "site": "https://xeraph.dev",
   "social": {
-    "GitHub": "https://github.com/adrianrl99",
+    "GitHub": "https://github.com/xeraph-dev",
     "Linkedin": "https://www.linkedin.com/in/adrian-lópez/",
     "Telegram": "https://t.me/fourblues",
     "Twitter": "https://twitter.com/xeraphdev"
   },
   "utilLinks": {
-    "dotfiles": "https://github.com/adrianrl99/dotfiles",
+    "dotfiles": "https://github.com/xeraph-dev/dotfiles",
     "vscode": "/vscode",
     "eslint-prettier": "/eslint-prettier"
   },
