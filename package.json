@@ -1,41 +1,10 @@
 {
-  "name": "@example/basics",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "xeraph-dev",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "gen:locales": "astro-i18next generate",
-    "deploy": "vercel deploy"
+    "site": "pnpm --filter '@xeraph-dev/portfolio'"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.17.0",
-    "@astrojs/sitemap": "^1.0.1",
-    "@astrojs/tailwind": "^3.0.1",
-    "@fontsource/amita": "^4.5.10",
-    "@tailwindcss/line-clamp": "^0.4.2",
-    "@types/luxon": "^3.2.0",
-    "astro": "^2.0.14",
-    "astro-compress": "^1.1.33",
-    "astro-i18next": "^1.0.0-beta.17",
-    "astro-robots-txt": "^0.4.0",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
-    "vercel": "^28.16.2"
-  },
-  "dependencies": {
-    "@astrojs/svelte": "^2.0.2",
-    "@fontsource/nunito": "^4.5.12",
-    "@popperjs/core": "^2.11.6",
-    "@zerodevx/svelte-toast": "^0.8.2",
-    "iconify-icon": "^1.0.5",
-    "luxon": "^3.2.1",
-    "svelte": "^3.55.1",
-    "svelte-highlight": "^7.2.0"
+    "@changesets/cli": "^2.26.2"
   }
 }
