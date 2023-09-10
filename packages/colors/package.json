@@ -1,0 +1,61 @@
+{
+  "name": "@xeraph-dev/colors",
+  "version": "0.0.1",
+  "description": "Colors for console.log",
+  "license": "MIT",
+  "author": {
+    "url": "https://xeraph.dev",
+    "name": "Xeraph"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xeraph-dev/portfolio-v4",
+    "directory": "packages/colors"
+  },
+  "homepage": "https://github.com/xeraph-dev/portfolio-v4/tree/main/packages/colors",
+  "bugs": "https://github.com/xeraph-dev/portfolio-v4/issues",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./global": {
+      "types": "./dist/global.d.ts",
+      "import": "./dist/global.js",
+      "require": "./dist/global.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "./dist",
+    "./assets",
+    "./README.md",
+    "./package.json"
+  ],
+  "scripts": {
+    "build": "bun run build.ts",
+    "types": "tsc --skipLibCheck --emitDeclarationOnly --declaration --declarationMap --declarationDir dist src/index.ts src/global.ts",
+    "check": "tsc",
+    "lint": "eslint build.ts src/*.ts --fix"
+  },
+  "prettier": "@xeraph-dev/prettier-config",
+  "eslintConfig": {
+    "extends": "@xeraph-dev",
+    "rules": {
+      "no-extend-native": "off",
+      "no-control-regex": "off",
+      "no-lone-blocks": "off"
+    }
+  },
+  "devDependencies": {
+    "@xeraph-dev/eslint-config": "^0.0.2",
+    "@xeraph-dev/prettier-config": "^0.0.2",
+    "bun-types": "^1.0.1",
+    "esbuild": "^0.19.2",
+    "glob": "^10.3.4",
+    "pretty-bytes": "^6.1.1",
+    "typescript": "^5.2.2"
+  }
+}
