@@ -21,7 +21,3 @@ Project that contains [my personal portfolio](./site/README.md) and the initial 
 - CSS Preprocessor - [sass](https://sass-lang.com/)
 - Unit testing for scss files - [sass-true](https://www.oddbird.net/true/docs/)
 - Hosting platform - [vercel](https://vercel.com/)
-
-## Working with packages
-
-Instead of changing the current directory to the working package, prefer to use pnpm scripts, such as `pnpm site add -D vitest` to add `vitest` as a development dependency of the `site` package, or `pnpm site dev` to run the `dev` script of the `site` package.
