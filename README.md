@@ -11,10 +11,14 @@ Project that contains [my personal portfolio](./site/README.md) and the initial 
 
 # Development
 
-- Package manager and workspace manager - [pnpm](https://pnpm.io/)
-- Runtime version manager - [asdf-vm](https://asdf-vm.com/)
+- Runtime - [bun](https://bun.sh)
+- Package manager - [bun](https://bun.sh)
+- Workspace manager - [bun](https://bun.sh)
+- JavaScript/TypeScript bundler - [bun](https://bun.sh) and [esbuild](https://esbuild.github.io) for commonjs outputs
+- Unit testing and coverage for JavaScript/TypeScript - [bun](https://bun.sh)
 - Project version manager - [changeset](https://github.com/changesets/changesets)
-- Unit testing and coverage for javascript/typescript files - [vitest](https://vitest.dev/)
+- Pre-commit hook - [husky](https://typicode.github.io/husky/)
+- CSS Preprocessor - [sass](https://sass-lang.com/)
 - Unit testing for scss files - [sass-true](https://www.oddbird.net/true/docs/)
 - Hosting platform - [vercel](https://vercel.com/)
 
