@@ -1,5 +1,11 @@
 # @xeraph-dev/colors
 
+## 0.1.2
+
+### Patch Changes
+
+- 9f6db3d: added source code to package files
+
 ## 0.1.1
 
 ### Patch Changes
